@@ -1,0 +1,27 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+t = np.linspace(0, 1000, 2000)
+w = 0.05
+
+# a > 0
+a1 = 0.002
+x1 = np.exp(a1 * t) * np.cos(w * t)
+
+plt.figure()
+plt.plot(t, x1)
+plt.xlabel("t")
+plt.ylabel("x(t)")
+plt.title("سیگنال سینوسی میراشونده افزایشی (a > 0)")
+plt.show()
+
+# a < 0
+a2 = -0.002
+x2 = np.exp(a2 * t) * np.cos(w * t)
+
+plt.figure()
+plt.plot(t, x2)
+plt.xlabel("t")
+plt.ylabel("x(t)")
+plt.title("سیگنال سینوسی میراشونده کاهشی (a < 0)")
+plt.show()
